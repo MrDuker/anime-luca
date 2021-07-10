@@ -23,9 +23,11 @@ Here are the bot features available so far:
 	- Auto-role for member joins
 	- Auto-filter for unmentionable usernames/nicknames with [`decancer`](https://npm.im/decancer)
 	- Auto-dehoist for usernames/nicknames
-	- Anti-N-word handler
+	- Anti-N-word
 	- Anti-discord-ads (except for in a special advertising channel)
 	- Only-once-advertisement system
+- Eval command
+	- Fake eval command
 
 ### Running
 Testing/running the bot is easy. Just clone this repo and run the following on your terminal:
