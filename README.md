@@ -55,7 +55,6 @@ WEBHOOK_URL=/api/webhooks/WEBHOOK_ID/WEBHOOK_TOKEN
 Here are some information on the bot's directory and files so you don't get lost:
 - [`index.js`](https://github.com/vierofernando/anime-luca/blob/main/index.js) The main entry point for the program. **No, this is not the bot's main file.**
 - [`bot/`](https://github.com/vierofernando/anime-luca/tree/main/bot) The core bot files.
-	- [`bot/constants.js`](https://github.com/vierofernando/anime-luca/blob/main/bot/weeb.js) The bot constants. More of a config file.
 	- [`bot/constants.js`](https://github.com/vierofernando/anime-luca/blob/main/bot/constants.js) The bot constants. More of a config file.
 	- [`bot/db.js`](https://github.com/vierofernando/anime-luca/blob/main/bot/db.js) The bot's database handler. The bot uses [`mongodb`](https://mongodb.com/) for it's database and [`mongodb`](https://npm.im/mongodb) as it's driver.
 	- [`bot/faq.txt`](https://github.com/vierofernando/anime-luca/blob/main/bot/faq.txt) The main FAQ file contents used for the bot's faq command.
