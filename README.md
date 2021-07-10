@@ -12,7 +12,7 @@ Here are the bot features available so far:
 	- Clear warnings
 	- Adding warnings
 	- Listing warnings
-- FAQ \/ frequently-asked-questions
+- FAQ / frequently-asked-questions
 - Join position command
 - Mimicing people with webhooks
 - Mute system
