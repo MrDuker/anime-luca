@@ -76,12 +76,12 @@ module.exports = class WeebBot extends Bot {
 
     async ban(author, reason) {
         if (!this.mainGuild) return;
-        await this.mainGuild.ban(this.http.request, author, reason);
+        await this.mainGuild.ban(this.api, author, reason);
     }
 
     async dehoist(author) {
         if (!this.mainGuild) return;
-        await this.mainGuild.dehoist(this.http.request, author);
+        await this.mainGuild.dehoist(this.api, author);
     }
 
     async tryDehoist(author) {
@@ -103,7 +103,7 @@ module.exports = class WeebBot extends Bot {
         if (/nigg(a|er)/.test(decanceredFiltered))
             return await this.ban(author.user, 'Author has a racially offensive username.');
 
-        await this.mainGuild.resolveUnmentionableName(this.http.request, author.user, decancered);
+        await this.mainGuild.resolveUnmentionableName(this.api, author.user, decancered);
     }
 
     async warn(author, reason, moderator) {
@@ -188,7 +188,7 @@ module.exports = class WeebBot extends Bot {
     async mute(user, time, moderator) {
         const authorID = user.id;
         const mutedUntil = utc() + (time * 1000);
-        const success = await this.mainGuild.mute(this.http.request, authorID);
+        const success = await this.mainGuild.mute(this.api, authorID);
         if (!success) return this.log('{redtext:[ERROR]}', 'Cannot mute', authorID, 'cancelling.');
         if (!moderator)
             moderator = this.user;
@@ -226,10 +226,10 @@ module.exports = class WeebBot extends Bot {
     }
 
     async unmute(user, moderator, existingDBResponse) {
-        const success = await this.mainGuild.unmute(this.http.request, user.id || user);
+        const success = await this.mainGuild.unmute(this.api, user.id || user);
         if (!success) return this.log('{redtext:[ERROR]}', 'Cannot unmute', user.id || user, 'cancelling.');
         else if (!user.id)
-            user = await this.http.request('GET', `/users/${user}`);
+            user = await this.api('GET', `/users/${user}`);
 
         const authorID = user.id;
         if (!moderator)

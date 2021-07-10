@@ -14,13 +14,13 @@ module.exports = async (bot, data) => {
     else if (/^[!-']/.test(name))
         await bot.dehoist(data.user);
     else if (name !== data.user.username)
-        await bot.mainGuild.resolveUnmentionableName(bot.http.request, data.user, name);
+        await bot.mainGuild.resolveUnmentionableName(bot.api, data.user, name);
     
     if (process.uptime() < 30)
         return;
 
     if (!data.user.bot)
-        await bot.http.request('PUT', `/guilds/${data.guild_id}/members/${data.user.id}/roles/${autoroleID}`);
+        await bot.api('PUT', `/guilds/${data.guild_id}/members/${data.user.id}/roles/${autoroleID}`);
     
     await bot.mainGuild.log({
         title: `${name}#${data.user.discriminator} joined server.py!`,

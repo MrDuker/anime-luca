@@ -8,7 +8,6 @@ module.exports = {
         await typing(ctx);
 
         const { member, mentions, channel_id, timestamp, author } = ctx.message;
-        const { request } = ctx.bot.http;
         if (!member.roles.find(role => moderatorRoleIDs.includes(role))) return await ctx.send("You are not a moderator. I'll clear you from this server instead.");
         let limit = ctx.args.find(x => !isNaN(x) && x > 4 && x < 101) || null;
 
@@ -29,8 +28,8 @@ module.exports = {
         const current = utc();
         messages = messages.filter(x => ((current - new Date(timestamp)) / 1000) < 1209600).map(x => x.id);
 
-        await request('POST', `/channels/${channel_id}/messages/bulk-delete`, { messages });
-        await request('POST', `/channels/${channel_id}/messages`, {
+        await ctx.bot.api('POST', `/channels/${channel_id}/messages/bulk-delete`, { messages });
+        await ctx.bot.api('POST', `/channels/${channel_id}/messages`, {
             embed: {
                 title: `Successfully cleared ${messages.length} message${messages.length === 1 ? '' : 's'}.`,
                 color,

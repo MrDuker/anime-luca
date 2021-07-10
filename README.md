@@ -1,6 +1,38 @@
 # anime-luca
 Source code for the private moderation bot on my [personal discord server.](https://discord.gg/CQTSjVea8e)
 
+### Bot Features
+> **NOTE:**
+> This bot is primarily focused to work only on a __single__ server. Which means that **no, unfortunately you cannot really use this as a proper example for moderation bots.**
+
+Here are the bot features available so far:
+- Small caching system
+- Custom small database system
+- Warn-based moderation system
+	- Clear warnings
+	- Adding warnings
+	- Listing warnings
+- FAQ \/ frequently-asked-questions
+- Join position command
+- Mimicing people with webhooks
+- Mute system
+	- Continuing to listen to mute timeouts after bot login/restart
+- Moderation logging
+	- Welcome & Leaves
+- Automation
+	- Auto-role for member joins
+	- Auto-filter for unmentionable usernames/nicknames with [`decancer`](https://npm.im/decancer)
+	- Auto-dehoist for usernames/nicknames
+	- Anti-N-word handler
+	- Anti-discord-ads (except for in a special advertising channel)
+	- Only-once-advertisement system
+
+### Running
+Testing/running the bot is easy. Just clone this repo and run the following on your terminal:
+```bash
+$ npm i && node .
+```
+
 ### Environment Variables
 Here are the list of environment variables (A.K.A secrets) used by the bot:
 ```
@@ -31,12 +63,3 @@ Here are some information on the bot's directory and files so you don't get lost
 	- [`bot/weeb.js`](https://github.com/vierofernando/anime-luca/blob/main/bot/weeb.js) The core bot file. Where the bot starts and dies.
 - [`anime-list/`](https://github.com/vierofernando/anime-luca/tree/main/anime-list) The command files.
 - [`anime-events/`](https://github.com/vierofernando/anime-luca/tree/main/anime-list) Gateway event handler files.
-
-> **NOTE:**
-> This bot is primarily focused to work only on a __single__ server. Which means that **no, unfortunately you cannot use this as a proper example for moderation bots.** The bot uses [`discord-bot-lib`](https://npm.im/discord-bot-lib) as it's discord library. Which means that the caching system is made from scratch to ensure best memory usage.
-
-### Running
-Testing/running the bot is easy. Just clone this repo and run the following:
-```bash
-$ npm i && node .
-```
