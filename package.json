@@ -1,0 +1,15 @@
+{
+    "name": "anime-luca",
+    "description": "Private bot for null's server.",
+    "dependencies": {
+        "discord-bot-lib": "1.3.5",
+        "mongodb": "3.6.9",
+        "tio.js": "1.0.9",
+        "express": "4.17.1",
+        "decancer": "1.0.4"
+    },
+    "main": "index.js",
+    "scripts": {
+        "start": "node ."
+    }
+}

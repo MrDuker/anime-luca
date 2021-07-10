@@ -1,0 +1,23 @@
+Q: What is this server about?
+A: This server is a public server made to talk about {owner}'s projects or just have fun together!
+   In this server you can also have direct feed/updates about {owner}'s projects.
+
+Q: Who is {owner}?
+A: He is the owner of this server. [click here to go to his github](https://github.com/vierofernando)
+
+Q: Can i advertise?
+A: Yes. you can advertise here. You can advertise your server at {serverAdvertisingChannel}
+   or advertise your bot (if you're a bot developer) at {botAdvertisingChannel}.
+   You can advertise here as long as it's not primarily about NSFW and/or giveaway.
+
+Q: Can i add my bot here?
+A: Yes, feel free to DM the owner ({owner}) if you want to add your bot to this server (with a valid reason).
+
+Q: How do i get "Developer Friends" role?
+A: You can by DMing the owner, if the owner knows you he might give you the role.
+
+Q: How do i apply for moderator?
+A: You can by DMing the owner. Applications does not exist for now.
+
+Q: How do i get my bot here?
+A: Well, if you have feasible reason to do so, you can by DMing the owner.
