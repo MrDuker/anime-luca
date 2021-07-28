@@ -1,5 +1,5 @@
 # anime-luca
-Source code for the private moderation bot on my [personal discord server.](https://discord.gg/CQTSjVea8e)
+Source code for the private moderation bot on my personal discord server.
 
 ### Bot Features
 > **NOTE:**
